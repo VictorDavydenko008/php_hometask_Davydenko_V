@@ -20,4 +20,5 @@ trait DebugTrait
             echo "<script> console.log($data) </script>";
         }
     }
+
 }

@@ -4,7 +4,6 @@
 
     require_once __DIR__.'/../../vendor/autoload.php';
 
-
     use Phpcourse\Myproject\Classes\Controllers\AboutController;
     use Phpcourse\Myproject\Classes\Controllers\LoginController;
     use Phpcourse\Myproject\Classes\Controllers\ContactsController;
@@ -17,7 +16,7 @@
     use Phpcourse\Myproject\Classes\Interfaces\ControllerMethodName;
     use Phpcourse\Myproject\Classes\Router\Router;
     use Phpcourse\Myproject\Classes\StartApplication;
-
+    
     $router = new Router();
 
     $router->addRoute('/', HomeController::class, ControllerMethodName::METHOD_NAME);
