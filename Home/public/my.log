@@ -1,0 +1,2 @@
+[2023-04-10T16:54:45.737547+00:00] info.INFO: Controller is found ["Phpcourse\\Myproject\\Classes\\Controllers\\HomeController"] []
+[2023-04-10T16:54:45.959679+00:00] info.ERROR: Controller is not found ["Hello! Page not found",404,"/favicon.ico"] []
