@@ -15,6 +15,7 @@
         private string $URI;
         // об'єкт класу Router буде записаний в цю змінну
         private object $routerData;
+        private static array $instances = [];
         // просто константи
         const CONTROLLER = 1;
         const ACTION = 2;
@@ -26,6 +27,20 @@
             $this->routerData = $router;
             self::debugConsole($this->URI);
         }
+        public static function getInstance(Router $router, $uri): StartApplication
+        {
+            $cls = static::class;
+            if (!isset(self::$instances[$cls])) {
+                self::$instances[$cls] = new static($router, $uri);
+            }
+            return self::$instances[$cls];
+        }
+
+        public function __wakeup()
+        {
+            throw new \Exception("Cannot unserialize a singleton.");
+        }
+
         public function run(): void {
             self::debugConsole('StartApp');
             $logger = new Logger('info');

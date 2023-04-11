@@ -16,7 +16,7 @@
     use Phpcourse\Myproject\Classes\Interfaces\ControllerMethodName;
     use Phpcourse\Myproject\Classes\Router\Router;
     use Phpcourse\Myproject\Classes\StartApplication;
-    
+
     $router = new Router();
 
     $router->addRoute('/', HomeController::class, ControllerMethodName::METHOD_NAME);
@@ -34,7 +34,22 @@
 
     //$router->addRoute('/admin', AdminController::class, ControllerMethodName::METHOD_NAME);
 
-    $app = new StartApplication($router, $_SERVER['REQUEST_URI'] ?? '/');
-
+    $app = StartApplication::getInstance($router,  $_SERVER['REQUEST_URI'] ?? '/');
     $app->run();
+
+    // SINGLETON CHECK
+/*    function clientCode($router, $uri)
+    {
+        $s1 = StartApplication::getInstance($router, $uri);
+        $s2 = StartApplication::getInstance($router, $uri);
+        if ($s1 === $s2) {
+            echo "Singleton works, both variables contain the same instance.";
+        } else {
+            echo "Singleton failed, variables contain different instances.";
+        }
+    }
+    clientCode($router, $_SERVER['REQUEST_URI'] ?? '/');
+*/
+
+
 
