@@ -10,7 +10,7 @@ class Rendering{
         self::debugConsole('Rendering');
         $latte = new Engine;
         $latte->setTempDirectory('tempdir');
-        $var = ['message' => 'Have a nice day!'];
+        $var = ['data' => $data];
         $latte->render('templates/default/index.latte', $var);
     }
 }
