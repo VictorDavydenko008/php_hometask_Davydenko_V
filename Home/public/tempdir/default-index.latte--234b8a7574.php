@@ -11,10 +11,9 @@ final class Template234b8a7574 extends Latte\Runtime\Template
 		extract($ʟ_args);
 		unset($ʟ_args);
 
-		echo '<p>Hello World!</p><p>';
-		echo LR\Filters::escapeHtmlText($message) /* line 1 */;
-		echo '</p>
-
-';
+		$this->createTemplate('header.latte', $this->params, 'include')->renderToContentType('html') /* line 1 */;
+		$this->createTemplate("pages/{$page}.latte", $this->params, 'include')->renderToContentType('html') /* line 2 */;
+		$this->createTemplate('footer.latte', $this->params, 'include')->renderToContentType('html') /* line 3 */;
+		echo "\n";
 	}
 }

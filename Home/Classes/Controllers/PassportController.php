@@ -13,7 +13,7 @@ class PassportController implements ControllerMethodName
     public function index(): void
     {
         self::debugConsole('Controller');
-        $data = ['title' => 'Passport', 'content' => 'additional_pages/passport'];
+        $data = ['page' => 'passport', 'content' => 'additional_pages/passport'];
         new Rendering($data);
     }
 }

@@ -10,7 +10,7 @@ class Rendering{
         self::debugConsole('Rendering');
         $latte = new Engine;
         $latte->setTempDirectory('tempdir');
-        $var = ['data' => $data];
+        $var = ['page' => $data['page'], 'content' => $data['content']];
         $latte->render('templates/default/index.latte', $var);
     }
 }

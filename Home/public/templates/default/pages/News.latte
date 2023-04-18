@@ -1,0 +1,8 @@
+<div>
+    <h2>Welcome to {ucfirst($page)}</h2>
+</div>
+{foreach $content as $new}
+	<h3>{$new['header']|upper}</h3>
+	<p>{$new['text']}</p>
+	<p>{$new['date']}</p>
+{/foreach}

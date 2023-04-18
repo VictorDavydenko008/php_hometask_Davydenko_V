@@ -13,7 +13,7 @@ class StudentsParliamentController implements ControllerMethodName
     public function index(): void
     {
         self::debugConsole('Controller');
-        $data = ['title' => 'Students Parliament', 'content' => 'main_pages/sp'];
+        $data = ['page' => 'students parliament', 'content' => 'main_pages/sp'];
         new Rendering($data);
     }
 }

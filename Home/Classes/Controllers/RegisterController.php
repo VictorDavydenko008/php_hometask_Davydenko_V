@@ -12,7 +12,7 @@ class RegisterController
     public function index(): void
     {
         self::debugConsole('Controller');
-        $data = ['title' => 'Login', 'content' => 'auth/reg'];
+        $data = ['page' => 'login', 'content' => 'auth/reg'];
         new Rendering($data);
     }
 }

@@ -13,7 +13,7 @@ class ContactsController implements ControllerMethodName
     public function index(): void
     {
         self::debugConsole('Controller');
-        $data = ['title' => 'Contacts', 'content' => 'main_pages/contacts'];
+        $data = ['page' => 'contacts', 'content' => 'main_pages/contacts'];
         new Rendering($data);
     }
 }

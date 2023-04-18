@@ -12,7 +12,7 @@ class LoginController
     public function index(): void
     {
         self::debugConsole('Controller');
-        $data = ['title' => 'Login', 'content' => 'auth/login'];
+        $data = ['page' => 'login', 'content' => 'auth/login'];
         new Rendering($data);
     }
 }

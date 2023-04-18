@@ -13,7 +13,7 @@ class PortfolioController implements ControllerMethodName
     public function index(): void
     {
         self::debugConsole('Controller');
-        $data = ['title' => 'Portfolios', 'content' => 'additional_pages/portfolios'];
+        $data = ['page' => 'portfolios', 'content' => 'additional_pages/portfolios'];
         new Rendering($data);
     }
 }
